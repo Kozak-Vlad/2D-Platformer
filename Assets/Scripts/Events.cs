@@ -13,6 +13,11 @@ public class Events : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void NextLevel()
+    {
+        Scene current = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(current.buildIndex + 1);
+    }
     public void Quit()
     {
         Application.Quit();
